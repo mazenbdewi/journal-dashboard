@@ -3,16 +3,20 @@
 namespace App\Notifications;
 
 use Illuminate\Auth\Notifications\VerifyEmail as BaseVerifyEmail;
+use Illuminate\Bus\Queueable;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\URL;
 
 class CustomVerifyEmail extends BaseVerifyEmail
 {
+    use Queueable;
+
     public function toMail($notifiable)
     {
         $verificationUrl = $this->verificationUrl($notifiable);
 
         return (new \Illuminate\Notifications\Messages\MailMessage)
+            ->from('latakia-journal@latakia-univ.edu.sy', 'Journal System')
             ->subject(__('تأكيد البريد الإلكتروني - Email Verification'))
             ->view('emails.verify-email', [
                 'user' => $notifiable,
