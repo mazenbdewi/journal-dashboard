@@ -4,10 +4,11 @@ namespace App\Notifications;
 
 use Illuminate\Auth\Notifications\VerifyEmail as BaseVerifyEmail;
 use Illuminate\Bus\Queueable;
+use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\URL;
 
-class CustomVerifyEmail extends BaseVerifyEmail
+class CustomVerifyEmail extends BaseVerifyEmail implements ShouldQueue
 {
     use Queueable;
 
