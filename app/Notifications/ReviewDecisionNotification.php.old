@@ -1,0 +1,62 @@
+<?php
+
+namespace App\Notifications;
+
+use App\Models\Review;
+use Illuminate\Bus\Queueable;
+use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Notifications\Messages\BroadcastMessage;
+use Illuminate\Notifications\Messages\MailMessage;
+use Illuminate\Notifications\Notification;
+
+class ReviewDecisionNotification extends Notification implements ShouldQueue
+{
+    use Queueable;
+
+    public function __construct(public Review $review) {}
+
+    public function via(object $notifiable): array
+    {
+        return ['database', 'broadcast'];
+    }
+
+    public function toMail(object $notifiable): MailMessage
+    {
+        return (new MailMessage)
+            ->subject('قرار جديد بخصوص مراجعة المقالة')
+            ->line('تم اتخاذ قرار بخصوص المقالة التي قمت بمراجعتها.')
+            ->action('عرض التفاصيل', url('/admin/reviews/'.$this->review->id.'/edit'))
+            ->line('شكراً لاستخدامك نظام المراجعة');
+    }
+
+    public function toDatabase(object $notifiable): array
+    {
+        return $this->getMessageData();
+    }
+
+    public function toBroadcast(object $notifiable): BroadcastMessage
+    {
+        return new BroadcastMessage($this->getMessageData());
+    }
+
+    protected function getMessageData(): array
+    {
+        $articleTitle = $this->review->article->getDualTitle();
+        $decision = $this->review->decision_text;
+        $status = $this->review->status_text;
+
+        return [
+            'title' => 'قرار جديد بخصوص مراجعة المقالة',
+            'message' => "تم اتخاذ قرار {$decision} للمقالة: {$articleTitle}. الحالة الحالية: {$status}",
+            'article_title' => $articleTitle,
+            'review_id' => $this->review->id,
+            'article_id' => $this->review->article_id,
+            'decision' => $this->review->decision,
+            'status' => $this->review->status,
+            'type' => 'review_decision',
+            'url' => route('filament.admin.resources.reviews.edit', $this->review->id),
+            'icon' => 'heroicon-o-clipboard-document-check',
+            'created_at' => now()->toDateTimeString(),
+        ];
+    }
+}

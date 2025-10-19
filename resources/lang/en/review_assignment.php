@@ -1,0 +1,26 @@
+<?php
+
+return [
+    'navigation_group' => 'Review Management',
+    'model_label' => 'Reviewer Assignment',
+    'plural_label' => 'Reviewer Assignments',
+    'article' => 'Article',
+    'reviewer' => 'Reviewer',
+    'assigned_at' => 'Assigned At',
+    'deadline' => 'Deadline',
+    'deadline_placeholder' => 'Select a deadline date',
+    'status' => 'Status',
+    'pending' => 'Pending',
+    'completed' => 'Completed',
+    'declined' => 'Declined',
+    'accept' => 'Accept',
+    'decline' => 'Decline',
+    'score' => 'Score (1-5)',
+    'recommendation' => 'Recommendation',
+    'revise' => 'Revise',
+    'reject' => 'Reject',
+    'comments_to_author' => 'Comments to Author',
+    'comments_to_editor' => 'Comments to Editor',
+    'reviewed_at' => 'Reviewed At',
+    'download_article' => 'Download Article',
+];

@@ -1,0 +1,30 @@
+<?php
+
+return [
+    'site_name' => 'مجلة الجامعة',
+    'navigation_label' => 'المجلات',
+    'navigation_group' => 'المحتوى',
+    'model_label' => 'مجلة',
+    'plural_label' => 'المجلات',
+    'basic_info' => 'المعلومات الأساسية',
+    'translations' => 'الترجمات',
+    'language' => 'اللغة',
+    'title' => 'العنوان',
+    'description' => 'الوصف',
+    'image' => 'الصورة',
+    'image_helper' => 'الصورة المثالية 800x600 بكسل',
+    'creator_section' => 'المُنشئ',
+    'creator' => 'المُنشئ',
+    'code' => 'كود المجلة',
+    'issn' => 'ISSN',
+    'e_issn' => 'E-ISSN',
+    'name' => 'الاسم',
+    'has_issn' => 'يوجد ISSN',
+    'add_translation' => 'إضافة ترجمة',
+    'create_general_journal' => 'إنشاء المجلة العامة',
+    'create_general_journal_confirm' => 'هل أنت متأكد من أنك تريد إنشاء المجلة العامة؟ سيتم إضافة مجلة جديدة مع الترجمات الافتراضية.',
+    'general_journal_created' => 'تم إنشاء المجلة العامة بنجاح!',
+    'yes_create' => 'نعم، قم بالإنشاء',
+    'journal' => 'المجلة المرتبطة',
+
+];

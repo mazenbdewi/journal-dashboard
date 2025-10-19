@@ -1,0 +1,27 @@
+<?php
+
+return [
+    'navigation_label' => 'Issues',
+    'navigation_group' => 'Content',
+    'model_label' => 'Issue',
+    'plural_label' => 'Issues',
+    'basic_info' => 'Basic Information',
+    'translations' => 'Translations',
+    'language' => 'Language',
+    'title' => 'Title',
+    'description' => 'Description',
+    'image' => 'Image',
+    'image_helper' => 'Ideal size: 1200x630 pixels (16:9 ratio)',
+    'creator_section' => 'Creator',
+    'creator' => 'Creator',
+    'journal' => 'Journal',
+    'volume' => 'Volume',
+    'number' => 'Number',
+    'year' => 'Year',
+    'slug' => 'Slug',
+    'slug_hint' => 'Slug will be generated automatically when modifying data',
+    'generate_slug' => 'Generate Slug',
+    'published_at' => 'Publication Date',
+    'is_published' => 'Active?',
+    'add_translation' => 'Add Translation',
+];

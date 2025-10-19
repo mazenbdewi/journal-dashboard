@@ -1,0 +1,27 @@
+<?php
+
+return [
+    'navigation_label' => 'الأعداد',
+    'navigation_group' => 'المحتوى',
+    'model_label' => 'عدد',
+    'plural_label' => 'الأعداد',
+    'basic_info' => 'المعلومات الأساسية',
+    'translations' => 'الترجمات',
+    'language' => 'اللغة',
+    'title' => 'العنوان',
+    'description' => 'الوصف',
+    'image' => 'الصورة',
+    'image_helper' => 'الصورة المثالية 1200x630 بكسل (نسبة 16:9)',
+    'creator_section' => 'المُنشئ',
+    'creator' => 'المُنشئ',
+    'journal' => 'المجلة',
+    'volume' => 'المجلد',
+    'number' => 'العدد',
+    'year' => 'السنة',
+    'slug' => 'Slug',
+    'slug_hint' => 'سيتم توليد slug تلقائياً عند تعديل البيانات',
+    'generate_slug' => 'توليد Slug',
+    'published_at' => 'تاريخ النشر',
+    'is_published' => 'نشط؟',
+    'add_translation' => 'إضافة ترجمة',
+];

@@ -1,0 +1,28 @@
+<?php
+
+return [
+    'site_name' => 'Universitey Journal',
+    'navigation_label' => 'Journals',
+    'navigation_group' => 'Content',
+    'model_label' => 'Journal',
+    'plural_label' => 'Journals',
+    'basic_info' => 'Basic Information',
+    'translations' => 'Translations',
+    'language' => 'Language',
+    'title' => 'Title',
+    'description' => 'Description',
+    'image' => 'Image',
+    'image_helper' => 'Ideal size: 800x600 pixels',
+    'creator_section' => 'Creator',
+    'creator' => 'Creator',
+    'code' => 'Journal Code',
+    'issn' => 'ISSN',
+    'e_issn' => 'E-ISSN',
+    'name' => 'Name',
+    'has_issn' => 'Has ISSN',
+    'add_translation' => 'Add Translation',
+    'create_general_journal' => 'Create General Journal',
+    'create_general_journal_confirm' => 'Are you sure you want to create a general journal? A new journal will be added with default translations.',
+    'general_journal_created' => 'General journal created successfully!',
+    'yes_create' => 'Yes, create it',
+];
