@@ -96,11 +96,11 @@ class AdminpanelPanelProvider extends PanelProvider
                     ->navigationIcon('heroicon-o-bars-3')
                     ->navigationSort(7)                              // ← ترتيب الظهور
                     ->navigationCountBadge(false),
-                TwoFactorAuthenticationPlugin::make()
-                    ->enableTwoFactorAuthentication() // Enable Google 2FA
-                    // ->enablePasskeyAuthentication() // Enable Passkey
-                    ->addTwoFactorMenuItem() // Add 2FA menu item
-                    ->forceTwoFactorSetup(),
+                // TwoFactorAuthenticationPlugin::make()
+                //     ->enableTwoFactorAuthentication() // Enable Google 2FA
+                //     // ->enablePasskeyAuthentication() // Enable Passkey
+                //     ->addTwoFactorMenuItem() // Add 2FA menu item
+                //     ->forceTwoFactorSetup(),
 
             ])
             ->authMiddleware([
