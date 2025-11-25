@@ -81,7 +81,7 @@ class UserResource extends Resource
                             ->label(__('تأكيد'))
 
                             ->required()
-                            ->maxLength(255)
+
                             ->disabled(! $isSuperAdmin),
 
                         Forms\Components\Section::make(__('user.navigation.label_user'))
