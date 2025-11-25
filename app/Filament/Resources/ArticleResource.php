@@ -170,6 +170,7 @@ class ArticleResource extends Resource
                                         Forms\Components\Toggle::make('is_main_author')
                                             ->label(__('article.is_main_author'))
                                             ->default(false),
+
                                     ]),
                             ]),
 
@@ -202,6 +203,13 @@ class ArticleResource extends Resource
                                     // ->columnSpanFull()
                                     ->columns(2)
                                     ->addActionLabel(__('article.add_file')),
+
+                                Forms\Components\TextInput::make('created_by')
+                                    ->relationship('creator', 'name')
+
+                                    ->default(Auth::id())
+
+                                    ->required(),
                             ]),
                         ...($shouldHidePublishTab ? [] : [
                             Tab::make(__('article.tab_publish'))
@@ -222,14 +230,6 @@ class ArticleResource extends Resource
 
                                             Forms\Components\TextInput::make('doi')
                                                 ->label(__('article.doi')),
-                                            Forms\Components\Select::make('created_by')
-                                                ->relationship('creator', 'name')
-                                                ->searchable()
-                                                ->default(Auth::id())
-
-                                                ->dehydrated()
-                                                ->preload()
-                                                ->required(),
 
                                             Forms\Components\DatePicker::make('submission_at')
                                                 ->label(__('article.submission_date'))
