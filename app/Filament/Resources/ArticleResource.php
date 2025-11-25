@@ -226,7 +226,7 @@ class ArticleResource extends Resource
                                                 ->relationship('creator', 'name')
                                                 ->searchable()
                                                 ->default(Auth::id())
-                                                ->disabled()
+
                                                 ->dehydrated()
                                                 ->preload()
                                                 ->required(),
