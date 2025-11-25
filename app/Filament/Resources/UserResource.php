@@ -77,6 +77,12 @@ class UserResource extends Resource
                             ->required()
                             ->maxLength(255)
                             ->disabled(! $isSuperAdmin),
+                        Forms\Components\TextInput::make('email_verified_at')
+                            ->label(__('تأكيد'))
+                            ->email()
+                            ->required()
+                            ->maxLength(255)
+                            ->disabled(! $isSuperAdmin),
 
                         Forms\Components\Section::make(__('user.navigation.label_user'))
                             ->schema([
