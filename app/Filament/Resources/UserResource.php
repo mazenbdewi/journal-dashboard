@@ -77,9 +77,9 @@ class UserResource extends Resource
                             ->required()
                             ->maxLength(255)
                             ->disabled(! $isSuperAdmin),
-                        Forms\Components\TextInput::make('email_verified_at')
+                        Forms\Components\DateTimePicker::make('email_verified_at')
                             ->label(__('تأكيد'))
-                            ->date()
+
                             ->required()
                             ->maxLength(255)
                             ->disabled(! $isSuperAdmin),
