@@ -100,7 +100,8 @@ class AdminpanelPanelProvider extends PanelProvider
                     ->enableTwoFactorAuthentication() // Enable Google 2FA
                     // ->enablePasskeyAuthentication() // Enable Passkey
                     ->addTwoFactorMenuItem() // Add 2FA menu item
-                    ->forceTwoFactorSetup(),
+                    ->forceTwoFactorSetup()
+                    ->disable(),
 
             ])
             ->authMiddleware([
