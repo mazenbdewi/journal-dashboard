@@ -205,7 +205,6 @@ class ArticleResource extends Resource
                                     ->addActionLabel(__('article.add_file')),
 
                                 Forms\Components\TextInput::make('created_by')
-                                    ->relationship('creator', 'name')
 
                                     ->default(Auth::id())
 
